@@ -2,447 +2,537 @@
 <html><!--conteneur de la page web-->
 
  <head><!--informations sur la page et contenu CSS (Cascading Style Sheet)-->
-  <title>Jean-Philippe Mary</title><!--nom de la page-->
-  <meta charset="utf-8"/><!--encodage utilisé-->
-  <!--Si une page CSS doit être appelée dans le même dossier qu'une la page HTML,
-  on utilise alors la fonction suivante: <link rel="stylesheet" href="style.css"> -->
+  <title>Jean-Philippe Mary</title>
+  <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-
-
+  <!--module d'adaptation au format smartphone-->
   
   <style> /*Contenu de la mise en page en CSS */
    
    body {
-    background-image: url(https://i.ibb.co/BV0xwXb/grid.png), linear-gradient(10deg, rgb(20, 30, 50), rgb(102, 102, 112));
-    /*Couleur de l'arrière plan avec une image png que j'ai créé et mis en boucle*/
+    background-image: linear-gradient(10deg, rgb(170, 150, 130), rgb(255, 250, 220));
     background-attachment: fixed;
-    background-size: 40px, 100%;
-    box-shadow: 0px 0px 0px 50px RGBa(20, 20, 20, 0.3);
-    color: #CCC;
-    /*Couleur du texte*/
-    font-family: Tahoma, Geneva, sans-serif;
-    /*Typographie utilisée*/
-    text-shadow: 1px 1px 1px RGBa(000, 000, 000, 0.2);
-    /*Ombre du texte*/
+    background-size: 100%;
+    font-family:Tahoma, sans-serif !important;
+    color: #432;
+    min-width: 720px;
    }
-   /*L'élément body utilisé dans le style contient en général les valeurs les plus utilisées et les valeurs de l'arrière-plan de la page*/
-   
    
    .style-text {
-    color: white;
+    color: #833;
     font-size: 16px;
     text-decoration: none;
    }
-   /*Classe utilisée pour le texte le plus courant dans ma page*/
-  
-   h1{
-    text-decoration: underline;
-   }
-   /*Classe utilisée pour le titre principal de ma page*/
    
-   h2{
-    font-family: 'Ubuntu', sans-serif;
-    color: #EEE;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-   }
-   /*Classe utilisée pour les titres secondaires de ma page*/
-   
-   h3{
-    font-family: 'Ubuntu', sans-serif;
-    color: #EEE;
-    font-size: 18px;
-   }
-   /*Classe utilisée pour les titres de ma page*/
-   
-   p{
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    text-align: justify;
-    
-   }
-   /*Classe utilisée pour les titres de ma page*/
-   
-   th{
-    border: 1px solid black;
-    padding: 10px 20px;
-    font-weight: normal;
-   }
-   
-   td{
-    border: 1px solid black;
-    padding: 10px 20px;
-    font-weight: bold;
-    color: white;
-   }
-   
-   table{
-    border-collapse: collapse;
-   }
-   
-   .menu-text {
-    color: #CCC;
-    text-decoration: none;
-    font-size: 150%;
-    transition: font-size 1s, color 1s;
-   }
-   
-   .menu-text:hover {
-    color: #FFF;
-    font-size: 180%;
-   }
-   
-   .box{
-    background: linear-gradient(10deg, rgb(20, 30, 50), rgb(102, 102, 112));
-    /*Couleur de l'arrière plan*/
+   .screenbox {
     width: auto;
-    /*Largeur de la boite*/
-    padding: 10px;
-    /*Espace entre le contenu et la boite*/
-    margin: 10px;
-    border-top: 2px ridge #444;
-    border-bottom: 2px ridge #444;
-    border-left: 4px solid #444;
-    border-right: 4px solid #444;
-    box-shadow: 0px 1px 1px #444 inset;
-    clear: both;
+    min-width: 270px;
+    min-height: 380px;
+    margin: 110px 90px 3% 10%;
+    overflow: scroll;
+    border-radius: 10% 1% 10% 1%;
+    border: 3px solid #987;
+    box-shadow: 0px 5px RGBa(20, 19, 18, 0.5) inset;
+    animation-name: screen-start;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
    }
    
-   .card{
-    background-color: RGBa(20, 30, 50, 0.5);
-    border-radius: 15px;
-    box-shadow: 0 300px 100px -100px RGBa(102, 102, 112, 0.5) inset;
-    width: 550px;
-    height: 320px;
-    padding: 10px;
-    margin: 10px;
-    border-top: 2px ridge #444;
-    border-bottom: 2px ridge #444;
-    border-left: 4px solid #444;
-    border-right: 4px solid #444;
-    position: relative;
-    float: left;
-    transition: box-shadow 1s, padding 5s;
+   @keyframes screen-start {
+    from {margin: 50px 90px 3% 10%; box-shadow: -3px 50px RGBa(20, 19, 18, 0.1);}
+    to {margin: 110px 90px 3% 10%; box-shadow: -3px 5px RGBa(20, 19, 18, 0.3);}
    }
    
-   
-   .card:hover{
-    box-shadow: 0 400px 100px -100px RGBa(122, 122, 132, 0.5) inset; 
-   }
-   
-   .text1 {
+   .id{
+    z-index: 9;
+    overflow: hidden;
     position: absolute;
-    top: -20px;
-    color: white;
-    font-size: 32px;
-    text-decoration: none;
-    text-align: left;
-    padding-left: 5px;
-    text-shadow: 1px 1px 1px #222;
+    top: 15px;
+    left: 20px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-image: linear-gradient(10deg, rgb(170, 150, 130), rgb(255, 250, 220));
+    background-attachment: fixed;
+    background-size: 100%;
+    border: 3px solid #987;
+    box-shadow: -20px 80px RGBa(20, 19, 18, 0.3) inset;
+    animation-name: hublot-photo;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
    }
    
-   .text2 {
-    position: absolute;
-    width: 280px;
-    top: 25px;
-    color: #5CF;
-    font-size: 16px;    
-    text-decoration: none;
-    text-align: left;
-    padding-left: 5px;
-    text-shadow: 1px 1px 1px #222;
-   }
-   
-   #card-info {
-    position: absolute;
-    width: 471px;
-    height: 60px;
-    border: 2px solid #223;
-    border-radius: 7px;
-    padding-left: 10px;
-    padding-right: 65px;
-    background-color: RGBa(000, 000, 000, 0.2);
+   @keyframes hublot-photo {
+    from {box-shadow: -20px 80px RGBa(20, 19, 18, 0.3) inset;}
+    to {box-shadow: 0px 0px RGBa(20, 19, 18, 0.3) inset;}
    }
    
    .photo-id {
     position: absolute;
-    float: left;
-    top: 95px;
-    left: 30px;
-    border-radius: 5px;
-    height: 50%;
-   }
-   
-   #card-info2 {
-    position: absolute;
-    top: 93px;
-    left: 225px;
-    border-radius: 5px;
-    width: 236px;
-    height: 168px;
-    border: 2px solid #223;
-    border-radius: 7px;
-    padding-left: 30px;
-    padding-right: 65px;
-    background-color: RGBa(000, 000, 000, 0.2);
-   }   
-   
-   #card-banner {
-    position: absolute;
-    top: 280px;
-    left: 0px;
-    width: 570px;
-    height: 38px;
-    background-image: url(https://i.ibb.co/1RZkYtg/mini.png), linear-gradient(10deg, rgb(20, 30, 50), rgb(102, 102, 112));
-    background-size: 0.5%, 100%;
-   }
-   
-   #text-card-banner {
-    position: absolute;
-    float: left;
-    top: -6px;
-    left: 25px;
-   }
-   
-   #text-card-banner2 {
-    position: absolute;
-    top: -6px;
-    left: 465px;
-   }
-   
-    
-   .sommaire{
-    background: linear-gradient(10deg, rgb(20, 30, 50), rgb(102, 102, 112));
-    /*Couleur de l'arrière plan*/
-    width: auto;
-    height: 240px;
-    /*Largeur de la boite*/
-    padding: 10px;
-    /*Espace entre le contenu et la boite*/
-    margin: 10px 10px 0px 10px;
-    border-top: 2px ridge #444;
-    border-bottom: 2px ridge #444;
-    border-left: 4px solid #444;
-    border-right: 4px solid #444;
-    box-shadow: 0px 1px 1px #444 inset;
-    overflow: scroll;
-    min-width: 270px;
-   }
-   
-   #menu1{
-    position: absolute;
-    margin: -10px;
-   }
-   
-   .box{
-    background: linear-gradient(10deg, rgb(20, 30, 50), rgb(102, 102, 112));
-    /*Couleur de l'arrière plan*/
-    width: auto;
-    /*Largeur de la boite*/
-    padding: 10px;
-    /*Espace entre le contenu et la boite*/
-    margin: 10px;
-    border-top: 2px ridge #444;
-    border-bottom: 2px ridge #444;
-    border-left: 4px solid #444;
-    border-right: 4px solid #444;
-    box-shadow: 0px 1px 1px #444 inset;
-    clear: both;
-   }
-   
-   .box-head{
-    background: linear-gradient(3deg, rgb(30, 40, 50), rgb(122, 122, 132), rgb(180, 180, 200));
-    padding: 1px;
-    margin: -10px -10px 30px -10px;
-    box-shadow: 0px 2px 2px #222;   
-   }
-   
-   #bio {
-    height:330px;
-    overflow: scroll;
-    padding-left: 10px;
-    padding-right: 20px;
-    background-color: RGBa( 000, 000, 000, 0.1);
-    box-shadow: 0px 1px 2px #333 inset;
-   }   
-   
-   
-
-   
-   #tiptop{
-    padding-top: 3px;    
+    background-image: url(https://i.ibb.co/PY9vbSw/Photo-ID.jpg);
+    background-size: 120px;
+    background-attachment: static;
+    background-position: -5px 0px;
+    top: 43px;
+    left: -4px;
+    width: 92px;
     height: 0px;
-    width: 20px;
-    margin-left: 0%;
-    margin-top: 10px;
-    margin-bottom: 0px;
-   }
-
-    
-   #spot {
-    position: absolute;
-    background: radial-gradient(white 12%, #6EF 15%, #AAA 40%, transparent 70%, transparent 90%, transparent);
-    top: 0px;
-    left: 30px;
-    height:4px;
-    width: 550px;
-    animation-name: flash;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    animation-timing-function: ease-in-out;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+    border: 3px solid #987;
+    box-shadow: 0px 5px RGBa(20, 19, 18, 0.5) inset;
+    animation-name: photo-start;
+    animation-duration: 0.4s;
+    animation-delay: 2.2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
    }
    
-   #spot-box {
+   @keyframes photo-start {
+    from {border-radius: 50%; top: 42px; height: 0px; transform: rotate(-45deg);box-shadow: 0px 50px RGBa(20, 19, 18, 0.5) inset;}
+    to {border-radius: 50%; top:-4px; height: 92px; transform: rotate(0deg);box-shadow: 0px 5px RGBa(20, 19, 18, 0.5) inset;}
+   }
+   
+   .name-box{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size:10px;
+    padding-left: 0px;
+    position: fixed;
+    z-index: -1;
+    top: 17px;
+    left: 80px;
+    width: 0px;
+    height: 80px;
+    border-top: 1px solid RGBa(20, 19, 18, 0.3);
+    color: #876;
+    animation-name: name-start;
+    animation-duration: 1s;
+    animation-delay: 2.35s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+   }
+   
+   @keyframes name-start {
+    from {padding-left: 45px; width: 0px;}
+    to {padding-left: 45px; width: 240px;}
+   }
+   
+   #name-screen {
+    position: static;
+    overflow: hidden;
+    height: 50px;
+   }
+   #name {
     position: absolute;
     overflow: hidden;
-    height:4px;
-    width: 560px;
-    top: -3px;
-    left: 5px;
-    filter: blur(1px);
+    top: 27px;
+    height: 0px;
+    animation-name: name-coucou;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
    }
    
-   @keyframes flash {
-   0%{left: 450px; filter: hue-rotate(40deg); width: 200px;}
-   100%{left: -300px; filter: hue-rotate(0deg); width: 750px;}
+   @keyframes name-coucou {
+    from {top: 27px; height: 0px;}
+    to {top: 0px; height: 27px;}
+   }
+   #bar {
+    position: relative;
+    top: -10px;
+    left: -35px;
+    width: auto;
+    height: 3px;
+    box-shadow: 0px 0px 0px 3px #987 inset;
+   }
+   #mail-screen {
+    position: relative;
+    overflow: hidden;
+    top: -10px;
+    height: 30px;
+   }
+   #mail {
+    font-size: 14px;
+    position: absolute;
+    overflow: hidden;
+    top: -30px;
+    height: 30px;
+    animation-name: mail-coucou;
+    animation-duration: 1s;
+    animation-delay: 3.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+   }
+   
+   @keyframes mail-coucou {
+    from {top: -30px;}
+    to {top: -10px;}
+   }
+   
+   .sommaire-box {
+    z-index: 10;
+    overflow: visible;
+    position: relative;
+    float: left;
+    min-width: 250px;
+    max-width: 260px;
+    width: 20%;
+    height: 320px;
+    margin: 30px 4% 0% 1%;
+    border-radius: 10% 1% 1% 10%;
+    /*border: 1px solid #987;*/
+    box-shadow: 0px 3px RGBa(20, 19, 18, 0.3) inset;
+    animation-name: sommaire-start;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+   }
+   
+   @keyframes sommaire-start {
+    from {margin: 90px 4% 0% 1%; box-shadow: 0px 30px RGBa(20, 19, 18, 0.3) inset;}
+    to {margin: 30px 4% 0% 1%; box-shadow: 0px 3px RGBa(20, 19, 18, 0.3) inset;}
+   }
+   
+   .menu-text {
+    margin-left: -30px;
+    text-align: left;
+    color: #432;
+    text-decoration: none;
+    font-size: 100%;
+    transition: font-size 0.5s, color 1s;
+   }
+   
+   .menu-text:hover {
+    color: #000;
+    font-size: 110%;
+   }
+   
+   #menu-box{
+    animation-name: titles-start;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+   }
+   
+   @keyframes titles-start {
+    from {margin-top: 70%; opacity:0;}
+    to {margin-top: 50%;}
+   }
+   
+   
+   .style-list{
+    list-style: none;
+   }
+   
+   .sub-screen{
+    z-index: 10;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    height: 360px;
+    margin: 1% 1% 1% 1%;
+    border-radius: 10% 1% 10% 1%;
+    border: 1px solid #987;
+   }
+   
+   .megapage{
+    height: 9000px;
+    width: auto;
+   }
+   
+   .box-page{
+    text-align: justify;
+    text-shadow: -0.5px 1px 2px rgba(000, 000, 000, 0.05);
+    padding: 19px;
+    width: auto;
+    height: 360px;
+    overflow: scroll;
+    background-color: RGBa(255, 255, 255, 0.1);
+   }
+   
+   
+   .rotor{
+    clear:both;
+    z-index: 8;
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    width: 150px;
+    height: 75px;
+    border-top-left-radius: 300px;
+    box-shadow: 0px 3px RGBa(20, 19, 18, 0.3) inset;
+    animation-name: rotor-start;
+    animation-duration: 3.2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+   }
+   
+   @keyframes rotor-start {
+    from {left: -90px; top: -20px; transform: rotate(-40deg)}
+    to {left: 4px; top: 4px; transform: rotate(0deg)}
+   }
+   
+   .div-menu {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    float: left;
+    width:240px;
+    border-left: 10px solid #987;
+   }
+   .p-menu {
+    margin:0;
+    padding:0;
+    height:0;
+    padding:0 7px;
+    overflow:hidden;
+    transition:height .4s ease-out, padding .4s ease-out;
+   }
+   .h1-menu {
+    margin: 0;
+    padding:0;
+    font-size:1em;
+    transition:font-size .4s ease-out;
+   }
+   .a-banner {
+    display:block;
+    height:23px;
+    line-height:23px;
+    margin-left: 7px;
+    padding-bottom: 3px;
+    color:#432;
+    text-decoration:none;
+    text-align:left;
+    text-shadow:0 1px 0 rgba(255,255,255,.5);
+    border-bottom: 2px solid #987;
+    transition:margin-left .4s ease-out;
+   }
+   .a-banner:hover, .a-banner:focus {
+    opacity:.9;
+    font-size: 120%;
+   }
+   #menu-biographie:target + .p-menu {
+    height:90px;
+   }
+   #menu-interets:target + .p-menu {
+    height:90px;
+   }
+
+
+   .menu-focus{
+    font-family:Tahoma, sans-serif !important;
+    text-align: left;
+    color: #432;
+    font-size: 90%;
+    text-decoration: none;
+    transition:font-size .4s ease-out;
+   }
+   .menu-focus:hover{
+    font-size: 95%;
+   }
+   
+   #ancre0{
+    padding-top: 90px;
+    text-align: center;
+    font-size: 30px;
+    color: rgba(000, 000, 000, 0);
+    text-shadow: -0.5px 1px 2px rgba(000, 000, 000, 0);
+    animation-name: bienvenue;
+    animation-duration: 3.2s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+   }
+   @keyframes bienvenue {
+    from {color: rgba(000, 000, 000, 0); text-shadow: -0.5px 1px 2px rgba(000, 000, 000, 0);}
+    to {color: rgba(060, 040, 020, 0.4)}
+   }
+   .reflet, .reflet:before, .reflet span {
+    display: block;
+    margin: 0;
+    padding: 0;
+   }
+   .reflet, .reflet:before, .reflet:after {
+    position: relative;
+   }
+   .reflet {
+    top: -30px;
+   }
+   .reflet:before {
+    content: 'Bienvenue';
+    opacity: 0;
+    text-shadow: 0px 0px 5px rgba(060, 040, 020, 0);
+    top: 125px;
+    transform: scale(1, -1);
+    backface-visibility: visible;
+    z-index: 1;
+    animation-name: bienvenue-reflet;
+    animation-duration: 3.7s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+   }
+   @keyframes bienvenue-reflet {
+    from {opacity: 0; text-shadow: 0px 0px 5px rgba(060, 040, 020, 0);}
+    to {opacity: 0.1; text-shadow: 0px 0px 5px rgba(060, 040, 020, 1);}
+   }
+   
+   #ancre1{
+    box-shadow: 5px -42px 5px rgba(015, 010, 035, 0.1) inset;
+    background-image: radial-gradient(farthest-corner at 80% 10%, rgba(255, 250, 220, 0.5) 0%, rgba(190, 190, 170, 0.5) 50%,  rgba(171, 164, 156, 0.5) 100%);
+   }
+   
+   #invader{
+    float: left;
+    height: 30%;
+    shape-outside: url(https://i.ibb.co/3dq8tYM/32287-5-space-invaders-photos-thumb.png);
+    shape-image-threshold: 0.5;
+    shape-margin: 10px;
+    margin-right: 20px;
+   }
+   
+   #reaktor{
+    float: left;
+    height: 30%;
+    shape-outside: url(https://i.ibb.co/8rM65nP/reaktor.png);
+    shape-image-threshold: 0.5;
+    shape-margin: 10px;
+    margin-right: 20px;
+   }
+   
+   #lemur{
+    float: left;
+    height: 30%;
+    shape-outside: url(https://i.ibb.co/THQhLr9/lemur.png);
+    shape-image-threshold: 0.5;
+    shape-margin: 10px;
+    margin-right: 20px;
+   }
+   
+   h3 {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -20px;
+    padding-left: 20px;
+    margin-right: -20px;
    }
    
   </style>
+  
  </head>
  
  <body><!--conteneur html de la page-->
   
-  <div id="spot-box">
-   <div id="spot"></div>
-  </div>
-  
-  <div id="tiptop"></div>
-  
-  
-  <div class="card">
-   <div id="spot-box">
-    <div id="spot"></div>
-   </div>
-   <div id="card-info">
-    <h1 class="text1"><strong><em>Jean-Philippe MARY</em></strong></h1><!--titre de la page, l'élément strong sert au référencement-->
-    <h2 class="text2"><em>Fiche de présentation</em></h2>
-   </div>
-   <div id="card-img">
-    <img class="photo-id" src="https://i.ibb.co/PY9vbSw/Photo-ID.jpg" alt="Photo-ID">
-   </div>
-   <div id="card-info2">
-    <p>
-     <br>
-     55 rue Christophe Colomb<br>
-     37000 TOURS
-     <br><Br>
-     +33 6 62 79 94 28<br>
-     krumlek@hotmail.fr
+  <div class="sommaire-box">
+   <div class="div-menu">
+   <section>
+    <a class="a-banner" href="#menu-biographie" id="menu-biographie">
+     <h1 class="h1-menu">Biographie</h1>
+    </a>
+    <p class="p-menu"><a class="menu-focus" href="#ancre1">Le code, une passion d'enfance</a><br>
+     <a class="menu-focus" href="#ancre2">Modélisation UML?</a><br>
+     <a class="menu-focus" href="#ancre3">Autour de JAVA</a><br>
+     <a class="menu-focus" href="#ancre4">De Minecraft à Millenium Studio</a>
     </p>
-   </div>
-   <div id="card-banner">
-    <p id="text-card-banner"><em>Né le 17 12 1979</em></p>
-    <p id="text-card-banner2">Permis B</p>
-   </div>
-
-   
-   
-   
-   
+   </section>
+   <section>
+    <a class="a-banner" href="#ancre5">
+     <h1 class="h1-menu">Parcours / Diplômes</h1>
+    </a>
+   </section>
+   <section>
+    <a class="a-banner" href="#ancre6">
+     <h1 class="h1-menu">Experiences</h1>
+    </a>
+   </section>
+   <section>
+    <a class="a-banner" href="#menu-interets" id="menu-interets">
+     <h1 class="h1-menu">Centres d'intêrets</h1>
+    </a>
+    <p class="p-menu">
+     <a class="menu-focus" href="#ancre7">Musique</a><br>
+     <a class="menu-focus" href="#ancre8">Voyage</a><br>
+     <a class="menu-focus" href="#ancre9">Instruments virtuels</a><br>
+     <a class="menu-focus" href="#ancre10">Drone</a>
+    </p>
+   </section>
+  </div>
   </div>
   
-  <div class="sommaire">
-   <div class="box-head"><h2>Sommaire</h2></div>
-   
-    
-   <ul class="style-text" id="menu1"><!--liste ordonnée-->
-    <li><a class="menu-text" href="#ancre_1">Biographie</a></li><!--Lien vers une zone de la page-->
-    <li><a class="menu-text" href="#ancre_2">Parcours/Diplômes</a></li>
-    <li><a class="menu-text" href="#ancre_3">Experiences</a></li>
-    <li><a class="menu-text" href="#ancre_4">Centres d'intêrets</a></li>
-    <li><a class="menu-text" href="#ancre_5">Sites préférés</a></li>
-   </ul>
+  <div class="id">
+    <img class="photo-id">
+  </div>
+  <div class="rotor">
+  </div>
+  <div class="name-box">
+    <div id="name-screen"><h1 id="name">Jean-Philippe MARY</h1></div>
+    <div id="bar"></div>
+    <div id="mail-screen"><p id="mail">krumlek@hotmail.fr</p></div>
   </div>
   
-  <div class="box">
-   <div class="box-head" id="ancre_1"><h2>Biographie</h2></div>
-   <div id="bio">
-    <h3>Le code, une passion d'enfance</h3> 
-    <p>L'envie de m'adonner au monde de la programmation à débutée très tôt, en 1991, par le biais de calculatrices programmables, j'avais alors 11ans.<br> 
-    Une connaissance plus agée m'avait fait jouer à un jeu entièrement créé sur une <a class="style-text" href="https://fr.wikipedia.org/wiki/HP-48" target=blank>HP-48</a>.<br>
-    A 12ans, j'ai cassé ma tirelire pour une <a class="style-text" href="https://fr.wikipedia.org/wiki/Texas_Instruments_TI-85" target=blank>TI-85</a> et appris les rudiments 
-    du language <a class="style-text" href="https://fr.wikipedia.org/wiki/TI-Basic" target=blank>TI-Basic</a> pour copier, via des livres, modifier, puis conçevoir mes propres jeux.<br>
-    Il m'est arrivé plusieurs fois à cette époque, de débuguer des jeux conçus par des lycéens sur leur propre <a class="style-text" href="https://fr.wikipedia.org/wiki/TI-82" target=blank>TI-82</a>,
-     malgré quelques fonctionnalités différentes dans le language utilisé.</p>
-    
-    <h3>Modélisation UML?</h3>
-    <p>En 2006 je découvre alors un logiciel nommé
-    <a class="style-text" href="https://www.native-instruments.com/fr/products/komplete/synths/reaktor-6/" target=blank>Reaktor</a>,<br>
-    un logiciel permettant de creer des instruments de musiques virtuels et bien plus encore!<br>
-    Tout se fait en connectant des modules entre eux via des cables. Mis à part des modules liés au son, on peut y trouver des modules tels que des portes logiques, des visualiseurs graphiques,etc...<br>
-    Ceci ressemble en quelque sorte à de la modélisation UML.<br>
-    Devant tant de possibilités, j'ai imaginé, créé, optimisé et fait tester mes <a class="style-text" href="https://www.native-instruments.com/fr/reaktor-community/reaktor-user-library/all/all/all/818799/all/rating/all/" target=blank>créations</a> sur la librairie des utilisateurs, pas mal de réalisations...
-    dont un jeu, nommé
-    <a class="style-text" href="https://www.native-instruments.com/fr/reaktor-community/reaktor-user-library/entry/show/7673/" target=_blank>SpaceShip Racing</a>.<br>
-    Quelques jours plus tard, je reçois un mail venant des concepteurs du logiciel, me disant qu'ils étaient très impressionnés par mon travail et que mon jeu serait présenté lors de leur prochain salon à Berlin!</p>
-    
-    <h3>Autour de JAVA</h3>
-    <p>En 2009, je découvre alors <a class="style-text" href="https://processing.org/" target=blank>Processing</a>, un environnement de développement libre adapté aux arts graphiques.<br>
-    Je réussi à adapter et modifier quelques projets sans vraiment comprendre le language (ingénierie inversée), comme, par exemple, utiliser une reconnaissance faciale pour attribuer des masques sur plusieurs visages en temps réel.<br>
-    De part mes activités artistiques (M.A.O), je fus obligé de créer des interfaces sur tablette tactile pour contrôler mes instruments, via le logiciel <a class="style-text" href="https://liine.net/en/products/lemur/" target=blank>Lemur</a>, un puissant outil utilisant un laguage proche de Java.</p>
+  <div class="screenbox">
+   <div class="sub-screen">
+    <div class="megapage">
+     <div class="box-page" id="ancre0"><h1 class="reflet">Bienvenue</h1></div>
+     <div class="box-page" id="ancre1">
+      <h3>Le code, une passion d'enfance</h3>
+      <img id="invader" src="https://i.ibb.co/3dq8tYM/32287-5-space-invaders-photos-thumb.png" alt="32287-5-space-invaders-photos-thumb" border="0">
+      <p>L'envie de m'adonner au monde de la programmation à débutée très tôt, en 1991, par le biais de calculatrices programmables, j'avais alors 11ans.<br> 
+         Une connaissance plus agée m'avait fait jouer à un jeu entièrement créé sur une <a class="style-text" href="https://fr.wikipedia.org/wiki/HP-48" target=blank>HP-48</a>.<br>
+         A 12ans, j'ai cassé ma tirelire pour une <a class="style-text" href="https://fr.wikipedia.org/wiki/Texas_Instruments_TI-85" target=blank>TI-85</a> et appris les rudiments 
+         du language <a class="style-text" href="https://fr.wikipedia.org/wiki/TI-Basic" target=blank>TI-Basic</a> pour copier, via des livres, modifier, puis conçevoir mes propres jeux.<br>
+         Il m'est arrivé plusieurs fois à cette époque, de débuguer des jeux conçus par des lycéens sur leur propre <a class="style-text" href="https://fr.wikipedia.org/wiki/TI-82" target=blank>TI-82</a>,
+         malgré quelques fonctionnalités différentes dans le language utilisé.</p>
+     </div>
+     <div class="box-page" id="ancre2">
+      <h3>Modélisation UML?</h3>
+      <img id="reaktor" src="https://i.ibb.co/8rM65nP/reaktor.png" alt="reaktor" border="0">
+      <p>En 2006 je découvre alors un logiciel nommé
+      <a class="style-text" href="https://www.native-instruments.com/fr/products/komplete/synths/reaktor-6/" target=blank>Reaktor</a>,<br>
+      un logiciel permettant de creer des instruments de musiques virtuels et bien plus encore!<br>
+      Tout se fait en connectant des modules entre eux via des cables. Mis à part des modules liés au son, on peut y trouver des modules tels que des portes logiques, des visualiseurs graphiques,etc...<br>
+      Ceci ressemble en quelque sorte à de la modélisation UML.<br>
+      Devant tant de possibilités, j'ai imaginé, créé, optimisé et fait tester mes <a class="style-text" href="https://www.native-instruments.com/fr/reaktor-community/reaktor-user-library/all/all/all/818799/all/rating/all/" target=blank>créations</a> sur la librairie des utilisateurs, pas mal de réalisations...
+      dont un jeu, nommé
+      <a class="style-text" href="https://www.native-instruments.com/fr/reaktor-community/reaktor-user-library/entry/show/7673/" target=_blank>SpaceShip Racing</a>.<br>
+      Quelques jours plus tard, je reçois un mail venant des concepteurs du logiciel, me disant qu'ils étaient très impressionnés par mon travail et que mon jeu serait présenté lors de leur prochain salon à Berlin!
+      </p>
+     </div>
      
-    <h3>De Minecraft à Millenium Studio</h3>
-    <p></p>
-    <iframe width="468" height="315" src="https://www.youtube.com/embed/b5catMDi1AQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <div class="box-page" id="ancre3">
+      <h3>Autour de JAVA</h3>
+      <img id="lemur" src="https://i.ibb.co/THQhLr9/lemur.png" alt="lemur" border="0">
+      <p>En 2009, je découvre alors <a class="style-text" href="https://processing.org/" target=blank>Processing</a>, un environnement de développement libre adapté aux arts graphiques.<br>
+      Je réussi à adapter et modifier quelques projets sans vraiment comprendre le language (ingénierie inversée), comme, par exemple, utiliser une reconnaissance faciale pour attribuer des masques sur plusieurs visages en temps réel.<br>
+      De part mes activités artistiques (M.A.O), je fus obligé de créer des interfaces sur tablette tactile pour contrôler mes instruments, via le logiciel <a class="style-text" href="https://liine.net/en/products/lemur/" target=blank>Lemur</a>, un puissant outil utilisant un laguage proche de Java.
+      </p>
+     </div>
+     
+     <div class="box-page" id="ancre4">
+      <h3>De Minecraft à Millenium Studio</h3>
+      <iframe style="padding-bottom:16px" width="100%" height="100%" src="https://www.youtube.com/embed/b5catMDi1AQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </div>
+    </div>
    </div>
-  </div>
-  
-  <div class="box">
-   <div class="box-head" id="ancre_2"><h2>Qualités & compétences</h2></div>
    
-   <ol><!--listes imbriquées-->
-    <li class="style-text"><strong>Level Designer</strong>
-     <ul>
-      <li>Utilisation de logiciels nécessitants un language de programmation</li>
-      <li>Travail en équipe</li>
-      <li>Utilisation de logiciels graphiques</li>
-     </ul>
-    </li>
-    <li class="style-text">B</li>
-    <li class="style-text">C</li>
-   </ol>
-  </div>
-  
-  <div class="box">
-   <div class="box-head" id="ancre_3"><h2>Réalisations diverses</h2></div>
-   
-   <p class="style-text">Découvrez <a class="style-text" href="https://www.youtube.com/watch?v=b5catMDi1AQ" target=_blank>BeatCrafter</a></p><!--Lien web s'ouvrant dans un nouvel onglet-->
-   
-   <p class="style-text"><a class="style-text" href="mailto:krumlek@hotmail.fr">Contact</a></p>
-  </div>
-  
-  <table>
-   <tr class="box-head">
-    <th>Nom</th>
-    <th>Prénom</th>
-    <th colspan="3">né le</th>
-   </tr>
-   <tr>
-    <td>MARY</td>
-    <td>Jean-Philippe</td>
-    <td>17</td>
-    <td>12</td>
-    <td>1979</td>
-   </tr>
-  </table>
-  
-  
-  <div class="sphere">
   </div>
   
  </body>
